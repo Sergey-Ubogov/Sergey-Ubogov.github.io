@@ -1,0 +1,52 @@
+body {
+	background: url(fon.jpg);
+	background-size: cover;
+	text-align: center;
+}
+
+.content {
+	float: left;
+	width: 80%;
+}
+
+.advertising {
+	width: 20%;
+	float: right;
+}
+p {
+	font-family: cursive;
+	font-style: italic;
+	font-size: 15pt;
+}
+a {
+	font-size: 12pt;
+}
+img {
+	width: 250px;
+	height: 100px;
+}
+
+@media print {
+	.advertising {
+		display: none;
+	}
+	.content {
+		width: 100%;
+	}
+
+	body {
+		background: none;
+	}
+	p {
+		font-style: normal;
+		font-family: times;
+    	font-size:12pt;
+	}
+	a {
+		font-size: 12pt;
+		text-decoration:none
+	}
+	a[href]:after {
+		content:" (" attr(href) ") "; font-size: 80%);
+	}
+}
