@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="ru" onkeypress="go(event)">
+    <head>
+        <meta charset="utf-8">
+        <title>
+            Привет
+        </title>
+        <script>
+            arr = []
+            function go(e) {
+                arr.push(e.keyCode);
+                console.info(arr);
+                for (var i = 0; i < arr.length; i++) {
+                    if (arr.length >= 6 && arr[i] === 103 && arr[i+1] === 104 && arr[i+2] === 98 &&
+                        arr[i+3] === 100 && arr[i+4] === 116 && arr[i+5] === 110) {
+                        document.getElementById('player').play();
+                        document.getElementById('player').volume=0.07;
+                    }
+                }
+            }
+        </script>
+    </head>
+    
+    <body>
+        <audio id="player" src="maksim_leonidov_-_privet.mp3"></audio>
+        <h1> Наберите "привет"</h1>
+    </body>
+</html>
