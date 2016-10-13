@@ -11,8 +11,13 @@
                 arr.push(e.keyCode);
                 console.info(arr);
                 for (var i = 0; i < arr.length; i++) {
-                    if (arr.length >= 6 && arr[i] === 103 && arr[i+1] === 104 && arr[i+2] === 98 &&
-                        arr[i+3] === 100 && arr[i+4] === 116 && arr[i+5] === 110) {
+                    if (arr.length >= 6 &&
+                        (arr[i] === 103 || arr[i] === 1087)&&
+                        (arr[i+1] === 104 || arr[i+1] === 1088)&&
+                        (arr[i+2] === 98 || arr[i+2] === 1080) &&
+                        (arr[i+3] === 100 || arr[i+3] === 1074)&&
+                        (arr[i+4] === 116 || arr[i+4] === 1077)&&
+                        (arr[i+5] === 110 || arr[i+5] === 1090)) {
                         document.getElementById('player').play();
                         document.getElementById('player').volume=0.07;
                     }
